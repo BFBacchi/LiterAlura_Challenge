@@ -16,11 +16,7 @@ Al iniciar la aplicación, se muestra un menú con opciones para buscar libros, 
 > Recuerde que debe contar con una instancia de postgresql ya que se creara la base de datos con las respectivas tablas al ejecutar la aplicacion
 
 ## Imagenes del proyecto
-<img width="20%" src="https://github.com/IsaacCuautle/LiterAlura/assets/65583500/bc42625b-b464-4239-9110-6696d6dc4e7c" />
-<img width="20%" src="https://github.com/IsaacCuautle/LiterAlura/assets/65583500/bc323cfc-c0f5-4b85-93cf-fcb9f17c402e" />
-<img width="20%" src="https://github.com/IsaacCuautle/LiterAlura/assets/65583500/d0e97a84-857c-4385-810b-662fee4a7b77" />
-<img width="20%" src="https://github.com/IsaacCuautle/LiterAlura/assets/65583500/7da592ae-48db-4f6d-b4a9-b6b3aec7ebee" />
-<img width="15%" src="https://github.com/IsaacCuautle/LiterAlura/assets/65583500/da6905b7-b48a-41b8-98ad-fbaf4b79ac7b" />
+(https://github.com/BFBacchi/LiterAlura_Challenge/issues/1#issue-2398872774)
 
 ## Tecnologias utilizadas
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
