@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Main {
@@ -143,39 +144,49 @@ public class Main {
 
     // Trae todos los autores de los libros consultados en la BD
     private void consultarAutores() {
-        try{
+        try {
             autores = authorRepository.findAll();
             autores.stream().forEach(a -> {
+                String nacimiento = Optional.ofNullable(a.getNacimiento()).map(Object::toString).orElse("Desconocido");
+                String defuncion = Optional.ofNullable(a.getDefuncion()).map(Object::toString).orElse("Desconocido");
+
                 System.out.println("""
-                        Autor: %s
-                        Año de nacimiento: %s
-                        Año de defuncion: %s
-                    """.formatted(a.getAutor(),
-                        a.getNacimiento().toString(),
-                        a.getDefuncion().toString()));
+                    Autor: %s
+                    Año de nacimiento: %s
+                    Año de defuncion: %s
+                """.formatted(a.getAutor(), nacimiento, defuncion));
             });
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println(e);
         }
-
     }
 
+
     // Trae a los autores apartir de cierto año
-    public void consultarAutoresPorAno()
-    {
+    public void consultarAutoresPorAno() {
         System.out.println("Ingresa el año a partir del cual buscar:");
         var anoBusqueda = scanner.nextInt();
         scanner.nextLine();
 
         List<Author> authors = authorRepository.autorPorFecha(anoBusqueda);
-        authors.forEach( a -> {
-            System.out.println("""
+
+        if (authors.isEmpty()) {
+            System.out.println("No se encontraron autores para el año especificado.");
+        } else {
+            authors.forEach(a -> {
+                String nacimiento = Optional.ofNullable(a.getNacimiento()).map(Object::toString).orElse("Desconocido");
+                String defuncion = Optional.ofNullable(a.getDefuncion()).map(Object::toString).orElse("Desconocido");
+
+                System.out.println("""
                     Nombre: %s
                     Fecha de nacimiento: %s
                     Fecha de defuncion: %s
-                    """.formatted(a.getAutor(),a.getNacimiento().toString(),a.getDefuncion().toString()));
-        });
+                    """.formatted(a.getAutor(), nacimiento, defuncion));
+            });
+        }
     }
+
+
 
 
     private void consultarLibrosLenguaje()
