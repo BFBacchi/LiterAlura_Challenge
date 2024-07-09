@@ -7,7 +7,7 @@ Liter Alura es una aplicación de consola para consultar libros de dominio públ
 Al iniciar la aplicación, se muestra un menú con opciones para buscar libros, consultar libros guardados, consultar autores, consultar autores por año y consultar libros por idioma. Al buscar un libro, se obtiene la información de la API y se guarda en la base de datos. Las opciones de consulta permiten visualizar los datos almacenados. 🔍✨
 
 ## ¿Como utlizarlo?
-1. Clone o descargue el proyecto [aqui]([https://github.com/IsaacCuautle/LiterAlura/releases/download/v1.0.0/LiterAlura-main.zip](https://github.com/BFBacchi/LiterAlura_Challenge.git)
+1. Clone o descargue el proyecto [aqui](https://github.com/BFBacchi/LiterAlura_Challenge.git)
 2. Inicie la carpeta del proyecto en IntelliJ
 3. Configure su archivo application.properties
 4. Ejecute la clase LiterAluraApplication
